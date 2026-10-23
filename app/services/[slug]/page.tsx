@@ -6,6 +6,7 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { getService, services } from '@/content/source-services';
 
 export function generateStaticParams(){ return services.map(service=>({slug:service.slug})); }
+export const dynamicParams = false;
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const s=getService(slug);if(!s)return{};return{title:s.metaTitle,description:s.metaDescription,alternates:{canonical:`/services/${s.slug}`},openGraph:{title:s.metaTitle,description:s.metaDescription}};}
 const clean=(s:string)=>s.replace(/:$/, '');
 export default async function ServiceDetail({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const s=getService(slug);if(!s)notFound();return <>

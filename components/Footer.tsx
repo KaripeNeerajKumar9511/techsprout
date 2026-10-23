@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Techsprout AI Labs. All rights reserved.</span>
-        <div><a href="#">Privacy policy</a><a href="#">Terms &amp; conditions</a></div>
+        <div><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms &amp; conditions</Link></div>
       </div>
     </footer>
   );

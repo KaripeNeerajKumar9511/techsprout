@@ -47,7 +47,7 @@ The three founders appear as:
 
 ## Forms
 
-Contact and careers forms validate in the browser. They do not send or store submissions unless `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` is configured. Add the endpoint in Vercel Environment Variables before expecting live submissions.
+Contact and careers forms validate in the browser. Without a form service they open the visitor’s email app addressed to info@techsprout.ai. To deliver submissions directly, set `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` in the Vercel project environment variables and redeploy.
 
 ## Original brand assets
 
